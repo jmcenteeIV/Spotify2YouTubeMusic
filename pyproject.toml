@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "spotify2youtubemusic"
+version = "0.1.0"
+description = "Convert playlists between streaming providers"
+authors = ["Jansen McEntee <jmcenteeiv@gmail.com>"]
+license = "AGPLv3.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

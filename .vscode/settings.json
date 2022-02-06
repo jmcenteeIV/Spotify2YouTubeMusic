@@ -1,0 +1,9 @@
+{
+    "python.analysis.extraPaths": [
+        "lib/",
+        "${env:VIRTUAL_ENV}"
+    ],
+    "cSpell.words": [
+        "youtubemusic"
+    ]
+}

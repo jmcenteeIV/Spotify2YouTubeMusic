@@ -12,6 +12,7 @@ black = "^22.1.0"
 pylint = "^2.12.2"
 spotipy = "^2.19.0"
 ytmusicapi = "^0.20.0"
+PyYAML = "^6.0"
 
 [tool.poetry.dev-dependencies]
 

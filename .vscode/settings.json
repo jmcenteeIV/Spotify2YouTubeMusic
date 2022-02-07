@@ -1,9 +1,11 @@
 {
     "python.analysis.extraPaths": [
-        "lib/",
+        "${workspaceFolder}/spotify2youtube/",
         "${env:VIRTUAL_ENV}"
     ],
     "cSpell.words": [
+        "spotipy",
         "youtubemusic"
-    ]
+    ],
+    "python.linting.pylintPath": "${env:VIRTUAL_ENV}/Lib/sit-packages/pylint"
 }

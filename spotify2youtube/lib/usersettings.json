@@ -1,0 +1,40 @@
+{
+    "window.zoomLevel": 1,
+    "editor.renderIndentGuides": false,
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f"
+    },
+    "editor.wordWrap": "off",
+    "diffEditor.wordWrap": "off",
+    "editor.inlayHints.enabled": false,
+    "liveshare.connectionMode": "relay",
+    "remote.SSH.remotePlatform": {
+        "167.172.215.71": "linux"
+    },
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": ""
+        }
+    ],
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": false,
+    "blockman.n01LineHeight": 0,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.logLevel": "Error",
+    "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": true,
+    "editor.formatOnSave": true,
+    "python.linting.enabled": true,
+    "cSpell.userWords": [
+        "pyinstaller",
+        "pylint"
+    ],
+    "autoDocstring.docstringFormat": "google",
+    "autoDocstring.guessTypes": true

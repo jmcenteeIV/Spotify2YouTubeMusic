@@ -1,4 +1,4 @@
-from lib import spotify, youtube_music
+from lib import spotify
 
 """
 Entry file for spotify2youtube

@@ -49,17 +49,18 @@ class Spotify:
             artist_dict: dict[str, dict[Any, Any]] = items[0]
             print(artist_dict["name"], artist_dict["images"][0]["url"])
 
-    def get_playlists(self):
+    def get_playlists(self) -> dict[str, list[dict[str, str]]]:
+        playlists: dict[str, list[dict[str, str]]] = {}
         user: Any = self.spotify.current_user()  # type: ignore
         print(user)
-        playlists: Any = self.spotify.current_user_playlists()  # type: ignore
-        for playlist in playlists["items"]:
+        playlists_obj: Any = self.spotify.current_user_playlists()  # type: ignore
+        for playlist in playlists_obj["items"]:
             name = playlist["name"]
             print(name)
-            if "Heilung" in name:
-                playlist_uri = playlist["tracks"]["href"]
-                print(playlist_uri)
-                self.playlist_info[f"{name}"] = self.get_tracks(playlist_uri)  # type: ignore
+            playlist_uri = playlist["tracks"]["href"]
+            print(playlist_uri)
+            playlists[name]: list[dict[str, str]] = self.get_tracks(playlist_uri)  # type: ignore        
+        return playlists
 
     def get_tracks(self, uri: str) -> list[dict[str, str]]:
         playlist_dict = {}

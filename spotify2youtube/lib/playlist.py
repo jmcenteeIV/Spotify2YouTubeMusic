@@ -1,4 +1,5 @@
 from typing import Any
+from . import spotify, youtube_music
 
 
 class Playlist(object):
@@ -11,7 +12,7 @@ class Playlist(object):
     _instance = None
 
     def __init__(self) -> None:
-        raise RuntimeError("Game has already been instantiated")
+        raise RuntimeError("Class has already been instantiated")
 
     @classmethod
     def instance(cls):
@@ -20,8 +21,24 @@ class Playlist(object):
         return cls._instance
 
     # End Singleton code
+    
+    
+    def get_playlists(self, provider: str):
+        self.playlists: dict[str, list[dict[str, str]]] = {}
+        self.playlists = self.source_provider.get_playlists()
 
-    def get_playlists(self, provider: str) -> list[dict[str, Any]]:
+    def set_source_provider(self, provider: str, username: str, password: str) -> None:
+        match provider.lower():
+            case "spotify":
+                self.source_provider: spotify.Spotify = spotify.Spotify(username, password)
+            case _:
+                raise RuntimeError("Streaming provider not recognized")
 
-        playlist: list[dict[str, Any]] = []
-        return playlist
+    def set_target_provider(self, provider: str, username: str, password: str) -> None:
+        match provider.lower():
+            case "youtube_music":
+                self.target_provider: youtube_music.YoutubeMusic = youtube_music.YoutubeMusic(username, password)
+            case _:
+                raise RuntimeError("Streaming provider not recognized")
+    
+

@@ -7,5 +7,6 @@
         "spotipy",
         "youtubemusic"
     ],
-    "python.linting.pylintPath": "${env:VIRTUAL_ENV}/Lib/sit-packages/pylint"
+    "python.linting.pylintPath": "${env:VIRTUAL_ENV}/Lib/sit-packages/pylint",
+    "python.linting.enabled": false
 }
